@@ -39,6 +39,9 @@ def user_input_features():
 
 df = user_input_features()
 
+for column in df.columns:
+    if df[column].dtype == 'bool':
+        df[column] = df[column].astype('object')
 # Main Panel
 
 # Print specified input parameters
@@ -48,8 +51,13 @@ st.write('---')
 
 
 # Apply Model to Make Prediction
-loaded_model = pickle.load(open("finalized_model.sav", 'rb'))
-prediction = loaded_model.predict(df)
+def predict_price(data, filename):
+    loaded_model = pickle.load(open(filename, 'rb'))
+    prediction = loaded_model.predict(data)
+    return prediction
+
+prediction = predict_price(df, 'finalized_model.sav')
+print(type(prediction))
 
 formated_prediction = '${:,}'.format(int(prediction))
 st.header('Prediction du prix de vente')
