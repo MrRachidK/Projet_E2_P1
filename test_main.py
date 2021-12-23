@@ -45,4 +45,4 @@ def test_predict_price():
     assert isinstance(function_test, np.ndarray)
     assert isinstance(function_test[0], float)
     assert function_test[0] > 0
-    assert function_test[0] < 1000000
+    assert function_test[0] < 700000

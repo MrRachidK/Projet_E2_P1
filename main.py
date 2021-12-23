@@ -10,6 +10,7 @@ st.write('---')
 
 
 X = pd.read_csv("clean_X.csv")
+print(X)
 
 
 # Sidebar
