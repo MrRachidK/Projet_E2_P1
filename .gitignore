@@ -1,7 +1,4 @@
-/virtual-env/
-/.pytest_cache/
-/__pycache__/
-/src/__pycache__/
-/src/initial_model/__pycache__/
-/src/optimized_model/__pycache__/
-!*.gitkeep
+__pycache__/
+.pytest_cache/
+virtual-env/
+ 
