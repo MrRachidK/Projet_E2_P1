@@ -5,7 +5,7 @@ import pandas as pd
 import numpy as np
 import warnings
 warnings.filterwarnings("ignore")
-from src.optimized_model.main_Rachid import user_input_features, predict_price
+from src.optimized_model.apps.main_Rachid import user_input_features, predict_price
 
 def test_user_input_features():
     data = {'Age': int(),
