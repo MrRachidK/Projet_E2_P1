@@ -19,10 +19,6 @@ def app():
     model = load_model('/home/apprenant/Documents/Projets/Projet_E2_P1/src/optimized_model/finalized_model_Rachid.sav')
     X = pd.read_csv("/home/apprenant/Documents/Projets/Projet_E2_P1/data/clean_X_Rachid.csv")
 
-    # States
-
-    st.write(st.session_state)
-
     # Sidebar
     # Header of Specify Input Parameters
     st.sidebar.header("Quels sont vos critères ?")
