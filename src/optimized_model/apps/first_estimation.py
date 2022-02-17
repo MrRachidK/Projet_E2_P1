@@ -1,21 +1,11 @@
 import sys
 sys.path.insert(0,"/home/apprenant/Documents/Projets/Projet_E2_P1/")
 import streamlit as st
-import pickle
 import pandas as pd
+from src.optimized_model.functions import load_model, predict_price, user_input_features
 
-# Functions
 def app():
     # Load Model
-    def load_model(filename):
-        loaded_model = pickle.load(open(filename, 'rb')) 
-        return loaded_model
-
-    # Apply Model to Make Prediction
-    def predict_price(model, data):
-        prediction = model.predict(data)
-        return prediction
-
     model = load_model('/home/apprenant/Documents/Projets/Projet_E2_P1/src/optimized_model/finalized_model_Rachid.sav')
     X = pd.read_csv("/home/apprenant/Documents/Projets/Projet_E2_P1/data/clean_X_Rachid.csv")
 
@@ -58,13 +48,11 @@ def app():
                 'TotRmsAbvGrd': TotRmsAbvGrd,
                 'GarageCars': GarageCars
                 }
-                
         for key, value in data.items():
-            st.session_state[key] = value        
-        features = pd.DataFrame(data, index=[0])
-        for column in features.columns:
-            if features[column].dtype == 'bool':
-                features[column] = features[column].astype('object')
+            st.session_state[key] = value
+
+        features = user_input_features(data)
+
         st.header('Récapitulatif de vos choix')
         st.write(features)
         st.write('---')
