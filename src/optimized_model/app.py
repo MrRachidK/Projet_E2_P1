@@ -22,18 +22,10 @@ else:
         "Age":0,
         'LotArea':0,
         'GrLivArea':0,
-        'LotFrontage':0,
         'GarageArea':0,
         'Fence':False,
-        'Pool':False,
-        'YrSold':0,
-        'YearBuilt':0,
         'TotalBsmtSF':0,
         'FirstFlrSF':0,
-        'SecondFlrSF':0,
-        'FullBath':0,
-        'TotRmsAbvGrd':0,
-        'GarageCars':0
     })
 
 app.run()

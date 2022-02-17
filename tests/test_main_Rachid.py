@@ -10,36 +10,20 @@ import pickle
 def test_user_input_features():
     type_data = {'Age': int(),
             'GrLivArea': int(),
-            'LotFrontage': int(),
             'LotArea': int(),
             'GarageArea': float(),
             'Fence': bool(),
-            'Pool' : bool(),
-            'YrSold': int(),
-            'YearBuilt': int(),
             'TotalBsmtSF': int(),
-            'FirstFlrSF': int(),
-            'SecondFlrSF': int(),
-            'FullBath': int(),
-            'TotRmsAbvGrd': int(),
-            'GarageCars': int()
+            'FirstFlrSF': int()
             }
 
     fake_data = {'Age': 10,
             'GrLivArea': 100,
-            'LotFrontage': 10,
             'LotArea': 50,
             'GarageArea': 5,
             'Fence': True,
-            'Pool' : False,
-            'YrSold': 2000,
-            'YearBuilt': 2000,
             'TotalBsmtSF': 100,
-            'FirstFlrSF': 100,
-            'SecondFlrSF': 100,
-            'FullBath': 1,
-            'TotRmsAbvGrd': 1,
-            'GarageCars': 1
+            'FirstFlrSF': 100
             }
 
     type_dataframe_simulation = pd.DataFrame(type_data, index=[0])
@@ -57,19 +41,11 @@ def test_load_model():
 def test_predict_price():
     data = {'Age': 10,
             'GrLivArea': 100,
-            'LotFrontage': 10,
             'LotArea': 50,
             'GarageArea': 5,
             'Fence': True,
-            'Pool' : False,
-            'YrSold': 2000,
-            'YearBuilt': 2000,
             'TotalBsmtSF': 100,
-            'FirstFlrSF': 100,
-            'SecondFlrSF': 100,
-            'FullBath': 1,
-            'TotRmsAbvGrd': 1,
-            'GarageCars': 1
+            'FirstFlrSF': 100
             }
 
     dataframe_simulation = pd.DataFrame(data, index=[0])
