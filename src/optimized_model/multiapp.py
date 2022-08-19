@@ -1,7 +1,7 @@
 """Frameworks for running multiple Streamlit applications as a single app.
 """
 import sys
-sys.path.insert(0,"/home/apprenant/Documents/Projets/Projet_E2_P1/")
+sys.path.insert(0,"/home/marmouset/Documents/Projet_E2_P1/")
 import streamlit as st
 
 class MultiApp:

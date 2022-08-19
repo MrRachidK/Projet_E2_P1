@@ -1,13 +1,13 @@
 import sys
-sys.path.insert(0,"/home/apprenant/Documents/Projets/Projet_E2_P1/")
+sys.path.insert(0,"/home/marmouset/Documents/Projet_E2_P1/")
 import streamlit as st
 import pandas as pd
 from src.optimized_model.functions import load_model, predict_price, user_input_features
 
 def app():
 
-    model = load_model('/home/apprenant/Documents/Projets/Projet_E2_P1/src/optimized_model/finalized_model_Rachid.sav')
-    X = pd.read_csv("/home/apprenant/Documents/Projets/Projet_E2_P1/data/clean_X_Rachid.csv")
+    model = load_model('/home/marmouset/Documents/Projet_E2_P1/src/optimized_model/finalized_model_Rachid.sav')
+    X = pd.read_csv("/home/marmouset/Documents/Projet_E2_P1/data/clean_X_Rachid.csv")
 
     # Sidebar
     # Header of Specify Input Parameters

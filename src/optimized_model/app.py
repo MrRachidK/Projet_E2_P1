@@ -1,5 +1,5 @@
 import sys
-sys.path.insert(0,"/home/apprenant/Documents/Projets/Projet_E2_P1/")
+sys.path.insert(0,"/home/marmouset/Documents/Projet_E2_P1/")
 import streamlit as st
 from multiapp import MultiApp 
 from apps import home, first_estimation, second_estimation

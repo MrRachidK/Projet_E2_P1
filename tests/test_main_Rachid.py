@@ -1,5 +1,5 @@
 import sys
-sys.path.insert(0, "/home/apprenant/Documents/Projets/Projet_E2_P1/")
+sys.path.insert(0, "/home/marmouset/Documents/Projet_E2_P1/")
 import pandas as pd
 import numpy as np
 import warnings
@@ -16,7 +16,6 @@ def test_user_input_features():
             'TotalBsmtSF': int(),
             'FirstFlrSF': int()
             }
-
     fake_data = {'Age': 10,
             'GrLivArea': 100,
             'LotArea': 50,
@@ -33,7 +32,7 @@ def test_user_input_features():
     assert len(function_test.columns) == len(type_dataframe_simulation.columns)
 
 def test_load_model():
-    filename = '/home/apprenant/Documents/Projets/Projet_E2_P1/src/optimized_model/finalized_model_Rachid.sav'
+    filename = '/home/marmouset/Documents/Projet_E2_P1/src/optimized_model/finalized_model_Rachid.sav'
     function_test = load_model(filename)
     assert type(filename) == str
     assert type(function_test) == type(pickle.load(open(filename, 'rb')))
@@ -54,7 +53,7 @@ def test_predict_price():
         if dataframe_simulation[column].dtype == 'bool':
             dataframe_simulation[column] = dataframe_simulation[column].astype('object')
 
-    filename = '/home/apprenant/Documents/Projets/Projet_E2_P1/src/optimized_model/finalized_model_Rachid.sav'
+    filename = '/home/marmouset/Documents/Projet_E2_P1/src/optimized_model/finalized_model_Rachid.sav'
     model = pickle.load(open(filename, 'rb'))
 
     function_test = predict_price(model, dataframe_simulation)
